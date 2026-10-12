@@ -1,12 +1,12 @@
-# Bookteria
+# BookTalk
 
-Bookteria là hệ thống mạng xã hội dành cho người yêu sách. Người dùng có
+BookTalk là hệ thống mạng xã hội dành cho người yêu sách. Người dùng có
 thể đăng ký và đăng nhập, quản lý hồ sơ, chia sẻ bài viết, trò chuyện, tìm
 kiếm nội dung và lưu trữ tệp thông qua các dịch vụ độc lập.
 
 ## Kiến trúc hệ thống
 
-Bookteria được xây dựng theo kiến trúc microservices:
+BookTalk được xây dựng theo kiến trúc microservices:
 
 - **Web App**: giao diện ReactJS cho người dùng.
 - **Mobile App**: ứng dụng Flutter.
@@ -94,8 +94,5 @@ README hướng dẫn riêng của từng thành phần nằm trong các thư m�
 - [`web-app`](./web-app/README.md)
 - [`mobile-app`](./mobile-app/README.md)
 
-## Sơ đồ hệ thống
 
-Sơ đồ kiến trúc được lưu tại
-[`image/bookteria-architecture.png`](./image/bookteria-architecture.png).
 

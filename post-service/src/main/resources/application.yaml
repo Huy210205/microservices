@@ -9,6 +9,9 @@ spring:
     mongodb:
       uri: mongodb://root:root@localhost:27017/post-service?authSource=admin
 
+  kafka:
+    bootstrap-servers: localhost:9094
+
 app:
   services:
     profile:

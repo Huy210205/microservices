@@ -18,6 +18,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
+import org.springframework.kafka.core.KafkaTemplate;
 
 import java.time.Instant;
 
@@ -30,6 +31,7 @@ public class PostService {
     PostRepository postRepository;
     PostMapper postMapper;
     ProfileClient profileClient;
+    KafkaTemplate<String, Object> kafkaTemplate;
 
     public PostResponse createPost(PostRequest request){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
@@ -42,6 +44,7 @@ public class PostService {
                 .build();
 
         post = postRepository.save(post);
+        kafkaTemplate.send("post-created", PostCreatedEvent.from(post));
         return postMapper.toPostResponse(post);
     }
 

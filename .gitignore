@@ -30,3 +30,6 @@ target/
 # Node dependencies
 node_modules/
 replay_pid*
+
+# Project documentation kept locally
+ELASTICSEARCH.md
